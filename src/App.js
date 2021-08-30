@@ -8,9 +8,10 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {(localStorage.getItem('token') == null)
-          ? <Redirect to='/login' />
-          : <Redirect to='/home' />
+        {
+          (localStorage.getItem('token') == null) ?
+            <Redirect to='/login' />
+            : <Redirect to='/home' />
         }
         <Switch>
           <Route path="/home" exact={true} component={Home} />
